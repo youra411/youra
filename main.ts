@@ -1,36 +1,36 @@
-input.onButtonPressed(Button.A, function on_button_pressed_a() {
+input.onButtonPressed(Button.A, function () {
     basic.showNumber(input.temperature())
 })
-input.onSound(DetectedSound.Loud, function on_sound_loud() {
+input.onSound(DetectedSound.Loud, function () {
     music.playSoundEffect(music.createSoundEffect(WaveShape.Sine, 5000, 0, 255, 0, 500, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
     music.startMelody(music.builtInMelody(Melodies.JumpUp), MelodyOptions.Once)
 })
-input.onGesture(Gesture.ThreeG, function on_gesture_three_g() {
+input.onGesture(Gesture.ThreeG, function () {
     music.playSoundEffect(music.createSoundEffect(WaveShape.Sine, 5000, 0, 255, 0, 500, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
     music.startMelody(music.builtInMelody(Melodies.Dadadadum), MelodyOptions.Once)
 })
-input.onButtonPressed(Button.AB, function on_button_pressed_ab() {
+input.onButtonPressed(Button.AB, function () {
     basic.showLeds(`
         . . # . .
-                . # # # .
-                # . # . #
-                . . # . .
-                . . # . .
-    `)
+        . # # # .
+        # . # . #
+        . . # . .
+        . . # . .
+        `)
 })
-input.onButtonPressed(Button.B, function on_button_pressed_b() {
+input.onButtonPressed(Button.B, function () {
     basic.showLeds(`
         . . # . .
-                . # . # .
-                # . . . #
-                . # . # .
-                . . # . .
-    `)
+        . # . # .
+        # . . . #
+        . # . # .
+        . . # . .
+        `)
 })
-input.onLogoEvent(TouchButtonEvent.Touched, function on_logo_touched() {
+input.onLogoEvent(TouchButtonEvent.Touched, function () {
     music.playSoundEffect(music.createSoundEffect(WaveShape.Sine, 5000, 0, 255, 0, 500, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
     music.playSoundEffect(music.builtinSoundEffect(soundExpression.happy), SoundExpressionPlayMode.UntilDone)
 })
-basic.forever(function on_forever() {
-    
+basic.forever(function () {
+	
 })
